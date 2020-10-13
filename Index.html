@@ -6,6 +6,7 @@
     <title>Basic Math Challenge</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="Content/starter-template.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="text-center font-weight-bold"><h1>Basic Math Challenge</h1></div>
@@ -55,7 +56,7 @@
                 <div class="col-2"><input id="input15"></div>
             </div>
             <div class="row text-center">
-                <div class="col-3"><button onclick="Mean" class="btn btn-danger" id="Mean-btn">Mean</button></div>
+                <div class="col-3"><button onclick="Mean" class="btn btn-info" id="Mean-btn">Mean</button></div>
                 <div class="col-9">The result of Mean is: <span id="result3"></span></div>
             </div>
         </div>
@@ -93,14 +94,16 @@
         </div>
     </section>
     <hr />
-
-
-
+    <section>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-8"><button type="reset" value="Reset" class="btn btn-danger" id="clear-btn">Reset></button></div>
+        </div>
+    </section>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 
     <script>
         //My comments inside a script: #1 Basic, #2 I input numbers, #3 User enters number
@@ -199,13 +202,23 @@
             spanEl.innerHTML = `<b>${result}<b>`;
         }
 
+    </script>
+
+    <script>
+
+        document.getElementsById("Clear-btn").addEventListener("click", function (Reset) {
+            document.getElementsByTagName("input").value = false; 
+            document.getElementByTagName("button").innerHTML = false;
+
+        })
+
         document.getElementById("txtInputIn").addEventListener("keydown", function (e) {
 
-            var charater = (e.which) ? e.which : e.keyCode;
-            console.log(charater)
+            var character = (e.which) ? e.which : e.keyCode;
+            console.log(character)
 
-            if (charater >= 97 && charater <= 122 ||
-                charater >= 65 && charater <= 90 || charater == 8) {
+            if (character >= 97 && character <= 122 ||
+                character >= 65 && character <= 90 || character == 8) {
                 return true;
             }
             else {
@@ -213,6 +226,7 @@
                 return false;
             }
 
+        });
 
     </script>
 
