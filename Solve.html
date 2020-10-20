@@ -20,14 +20,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Index.html" />
 
                         Home
                         <a href="#" Portfolio />
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Solve</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Code</a>
@@ -43,27 +43,93 @@
         </div>
     </nav>
 
+
+    <div class="text-center font-weight-bold"><h1 style="color:ivory">Basic Math Challenge</h1></div>
     <section>
         <div class="container">
-            <div class="row">
-                <div class="text-center font-weight-bold"><h1 style="color:ivory">Basic Math Challenge</h1></div>
-                <hr />
-                <div class="col align-items-md-center"></div>
-                <p class="text-light">In Basic Math one begins to explore how to translate math from our world into the computer's instruction-execution structure. This demonstration has five exercises:</p>
-                <ol class="text-light">
-                    <li>Identifying the least value in an array</li>
-                    <li>Identifying the greatest value in an array</li>
-                    <li>Identifying the mean value in an array</li>
-                    <li>Adding all the values in an array</li>
-                    <li>Multiplying all the values in an array</li>
-                </ol>
-                <p class="text-light">Although all the above are simple math operations they serve as foundation to develop the thought processes that allow us to create instructions the computer can use to support our efforts or needs.</p>
+            <div class="row text-center">
+                <div class="col-2"><input type="text" id="input1"></div>
+                <div class="col-2"><input type="text" id="input2"></div>
+                <div class="col-2"><input type="text" id="input3"></div>
+                <div class="col-2"><input type="text" id="input4"></div>
+                <div class="col-2"><input type="text" id="input5"></div>
+            </div>
+            <div>
+                <div class="row text-center">
+                    <div class="col-3"><button onclick="Least" class="btn btn-secondary" id="Least-btn">Least</button></div>
+                    <div class="col-6" style="color:ivory">The answer is: <span id="result1"></span></div>
+                </div>
             </div>
         </div>
     </section>
     <hr />
- 
-
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-2"><input id="input6"></div>
+                <div class="col-2"><input id="input7"></div>
+                <div class="col-2"><input id="input8"></div>
+                <div class="col-2"><input id="input9"></div>
+                <div class="col-2"><input id="input10"></div>
+            </div>
+            <div>
+                <div class="row text-center">
+                    <div class="col-3"><button onclick="Greatest" class="btn btn-success" id="Greatest-btn">Greatest</button></div>
+                    <div class="col-6" style="color:ivory">The answer is: <span id="result2"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-2"><input id="input11"></div>
+                <div class="col-2"><input id="input12"></div>
+                <div class="col-2"><input id="input13"></div>
+                <div class="col-2"><input id="input14"></div>
+                <div class="col-2"><input id="input15"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-3"><button onclick="Mean" class="btn btn-info" id="Mean-btn">Mean</button></div>
+                <div class="col-6" style="color:ivory">The answer is: <span id="result3"></span></div>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-2"><input id="input16"></div>
+                <div class="col-2"><input id="input17"></div>
+                <div class="col-2"><input id="input18"></div>
+                <div class="col-2"><input id="input19"></div>
+                <div class="col-2"><input id="input20"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-3"><button onclick="Sum" class="btn btn-warning" id="Sum-btn">Sum</button></div>
+                <div class="col-6" style="color:ivory">The answer is: <span id="result4"></span></div>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-2"><input id="input21"></div>
+                <div class="col-2"><input id="input22"></div>
+                <div class="col-2"><input id="input23"></div>
+                <div class="col-2"><input id="input24"></div>
+                <div class="col-2"><input id="input25"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-3"><button onclick="Product" class="btn btn-primary" id="Product-btn">Product</button></div>
+                <div class="col-6" style="color:ivory">The answer is: <span id="result5"></span></div>
+                <div class="col-3"><button type="button" onclick="ClearAll()" class="btn btn-danger btn elWide" id="clear">Clear</button></div>
+            </div>
+        </div>
+    </section>
+    <hr />
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

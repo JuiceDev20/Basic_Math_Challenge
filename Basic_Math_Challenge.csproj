@@ -79,6 +79,7 @@
     <Content Include="Fonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Index.html" />
+    <Content Include="Solve.html" />
     <Content Include="Images\favicon-32x32.png" />
     <Content Include="Images\Math-Challenge-bg.png" />
     <Content Include="Images\Math_Cha2.png" />
