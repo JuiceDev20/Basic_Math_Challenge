@@ -4,10 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Basic Math Challenge</title>
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/starter-template.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <link href="Content/prism-css.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Navigation -->
@@ -25,11 +27,11 @@
                         Home
                         <a href="#" Portfolio />
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Solve</a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Code.html">Code</a>
+                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Git</a>
@@ -41,104 +43,17 @@
             </div>
         </div>
     </nav>
-    <div class="text-center font-weight-bold"><h1 style="color:ivory">Basic Math Challenge</h1></div>
-    <section>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-2"><input type="text" id="input1"></div>
-                <div class="col-2"><input type="text" id="input2"></div>
-                <div class="col-2"><input type="text" id="input3"></div>
-                <div class="col-2"><input type="text" id="input4"></div>
-                <div class="col-2"><input type="text" id="input5"></div>
-            </div>
-            <div>
-                <div class="row text-center">
-                    <div class="col-3"><button onclick="Least" class="btn btn-secondary" id="Least-btn">Least</button></div>
-                    <div class="col-6" style="color:ivory">The answer is: <span id="result1"></span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <hr />
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-2"><input id="input6"></div>
-                <div class="col-2"><input id="input7"></div>
-                <div class="col-2"><input id="input8"></div>
-                <div class="col-2"><input id="input9"></div>
-                <div class="col-2"><input id="input10"></div>
-            </div>
-            <div>
-                <div class="row text-center">
-                    <div class="col-3"><button onclick="Greatest" class="btn btn-success" id="Greatest-btn">Greatest</button></div>
-                    <div class="col-6" style="color:ivory">The answer is: <span id="result2"></span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <hr />
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-2"><input id="input11"></div>
-                <div class="col-2"><input id="input12"></div>
-                <div class="col-2"><input id="input13"></div>
-                <div class="col-2"><input id="input14"></div>
-                <div class="col-2"><input id="input15"></div>
-            </div>
-            <div class="row text-center">
-                <div class="col-3"><button onclick="Mean" class="btn btn-info" id="Mean-btn">Mean</button></div>
-                <div class="col-6" style="color:ivory">The answer is: <span id="result3"></span></div>
-            </div>
-        </div>
-    </section>
-    <hr />
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-2"><input id="input16"></div>
-                <div class="col-2"><input id="input17"></div>
-                <div class="col-2"><input id="input18"></div>
-                <div class="col-2"><input id="input19"></div>
-                <div class="col-2"><input id="input20"></div>
-            </div>
-            <div class="row text-center">
-                <div class="col-3"><button onclick="Sum" class="btn btn-warning" id="Sum-btn">Sum</button></div>
-                <div class="col-6" style="color:ivory">The answer is: <span id="result4"></span></div>
-            </div>
-        </div>
-    </section>
-    <hr />
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-2"><input id="input21"></div>
-                <div class="col-2"><input id="input22"></div>
-                <div class="col-2"><input id="input23"></div>
-                <div class="col-2"><input id="input24"></div>
-                <div class="col-2"><input id="input25"></div>
-            </div>
-            <div class="row text-center">
-                <div class="col-3"><button onclick="Product" class="btn btn-primary" id="Product-btn">Product</button></div>
-                <div class="col-6" style="color:ivory">The answer is: <span id="result5"></span></div>
-                <div class="col-3"><button type="button" onclick="ClearAll()" class="btn btn-danger btn elWide" id="clear">Clear</button></div>
-            </div>
-        </div>
-    </section>
-    <hr />
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        //My comments inside a script: #1 Basic, #2 I input numbers, #3 User enters number
+            <div class="row">
+                <div class="text-center font-weight-bold"><h1 style="color:ivory">Basic Math Challenge</h1></div>
+                <hr />
+                <div class="row">
+                    <div class="col-12">
+                        <pre class="line-numbers language-js">
+                            <code class="language-js">
         document.getElementById("Least-btn").addEventListener("click", function () {
             Least()
-
         })
-
         function Least() {
             let input1 = document.getElementById("input1").value;
             let input2 = document.getElementById("input2").value;
@@ -147,17 +62,10 @@
             let input5 = document.getElementById("input5").value;
             let spanEl = document.getElementById("result1");
             spanEl.innerHTML = `<b>${Math.min(input1, input2, input3, input4, input5)}<b>`;
-
         }
-    </script>
-
-    <script>
-
         document.getElementById("Greatest-btn").addEventListener("click", function () {
             Greatest()
-
         })
-
         function Greatest() {
             let input6 = document.getElementById("input6").value;
             let input7 = document.getElementById("input7").value;
@@ -166,18 +74,10 @@
             let input10 = document.getElementById("input10").value;
             let spanEl = document.getElementById("result2");
             spanEl.innerHTML = `<b>${Math.max(input6, input7, input8, input9, input10)}<b>`;
-
         }
-
-    </script>
-
-    <script>
-
         document.getElementById("Mean-btn").addEventListener("click", function () {
             Mean()
-
         })
-
         function Mean() {
             let input11 = document.getElementById("input11").value;
             let input12 = document.getElementById("input12").value;
@@ -187,17 +87,10 @@
             let result = ((+input11 + +input12 + +input13 + +input14 + +input15) / 5);
             let spanEl = document.getElementById("result3");
             spanEl.innerHTML = `<b>${result}<b>`;
-
         }
-
-    </script>
-
-    <script>
-
         document.getElementById("Sum-btn").addEventListener("click", function () {
             Sum()
         })
-
         function Sum() {
             let input16 = document.getElementById("input16").value;
             let input17 = document.getElementById("input17").value;
@@ -207,17 +100,10 @@
             let result = +input16 + +input17 + +input18 + +input19 + +input20;
             let spanEl = document.getElementById("result4");
             spanEl.innerHTML = `<b>${result}<b>`;
-
         }
-
-    </script>
-
-    <script>
-
         document.getElementById("Product-btn").addEventListener("click", function () {
             Product()
         })
-
         function Product() {
             let input21 = document.getElementById("input21").value;
             let input22 = document.getElementById("input22").value;
@@ -228,10 +114,6 @@
             let spanEl = document.getElementById("result5");
             spanEl.innerHTML = `<b>${result}<b>`;
         }
-
-    </script>
-
-    <script>
         function ClearAll() {
             document.getElementById("input1").value = "";
             document.getElementById("input2").value = "";
@@ -264,9 +146,17 @@
             document.getElementById("result3").innerText = "";
             document.getElementById("result4").innerText = "";
             document.getElementById("result5").innerText = "";
-        }
+        }</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Scripts/prism-js.js"></script>
 
 
 </body>
